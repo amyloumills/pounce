@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Upload, Loader2, CheckCircle2 } from 'lucide-react';
-import { Modal } from '../ui/modal';
+import { Modal } from '../ui/Modal';
 import { useUpload } from '../../hooks/useUpload';
 
 interface Props {

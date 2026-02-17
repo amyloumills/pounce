@@ -19,7 +19,7 @@ export const Navbar = ({ onUploadClick }: { onUploadClick: () => void }) => {
           <div className="bg-indigo-600 p-2 rounded-xl group-hover:rotate-20 transition-transform shadow-lg shadow-indigo-200">
             <Cat className="w-6 h-6 text-white" />
           </div>
-          <img src={logo} alt="Pounce" className="h-7 w-auto" />
+          <img src={logo} alt="Pounce" className="h-16 w-auto" />
         </div>
 
         <Button onClick={onUploadClick} leftIcon={<Plus className="w-4 h-4" />} variant="primary">
