@@ -16,18 +16,18 @@ This project was built with a focus on type safety, performance and user experie
 
 ## ✨ Key Features ✨
 
-Optimistic UI updates
-Bento-box design system
-Smart data enrichment
-Component Architecture
-Cat Rain Easter Egg
+- Optimistic UI updates
+- Bento-box design system
+- Smart data enrichment
+- Component Architecture
+- Cat Rain Easter Egg
 
 ## 🛠️ Setup and Installation
 
-Clone this repo
-Install Dependencies
-Create a .env file in the root directory to add your API key
-Run Development Server
+- Clone this repo
+- Install Dependencies `npm i`
+- Create a .env file in the root directory to add your API key
+- Run Development Server `npm run dev`
 
 ## 🧪 Testing
 
