@@ -30,17 +30,6 @@ export interface Vote {
   country_code?: string;
 }
 
-// Upload response
-export interface UploadResponse {
-  id: string;
-  url: string;
-  width: number;
-  height: number;
-  original_filename: string;
-  pending: number;
-  approved: number;
-}
-
 type VoteValue = 1 | -1 | 0; // 1 for upvote, -1 for downvote, 0 for no vote
 
 // Enriched cat with aggregated data
