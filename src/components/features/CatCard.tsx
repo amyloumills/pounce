@@ -33,14 +33,16 @@ export const CatCard = ({ cat }: CatCardProps) => {
           <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-2 flex justify-around items-center shadow-lg border border-white/40">
             <button
               onClick={() => vote({ imageId: cat.id, value: 1 })}
-              className="p-2 hover:bg-emerald-500/10 rounded-xl text-emerald-600 transition-colors"
+              disabled={cat.userVote === 1}
+              className="p-2 hover:bg-emerald-500/10 rounded-xl text-emerald-600 transition-colors disabled:opacity-30"
             >
               <ArrowBigUp className="w-6 h-6" />
             </button>
             <span className="font-bold text-slate-800">{cat.score}</span>
             <button
               onClick={() => vote({ imageId: cat.id, value: -1 })}
-              className="p-2 hover:bg-rose-500/10 rounded-xl text-rose-600 transition-colors"
+              disabled={cat.userVote === -1}
+              className="p-2 hover:bg-rose-500/10 rounded-xl text-rose-600 transition-colors disabled:opacity-30"
             >
               <ArrowBigDown className="w-6 h-6" />
             </button>

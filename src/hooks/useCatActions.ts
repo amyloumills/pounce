@@ -16,7 +16,25 @@ export const useCatActions = () => {
       const previousCats = queryClient.getQueryData<EnrichedCat[]>(['cats']);
 
       queryClient.setQueryData<EnrichedCat[]>(['cats'], (old) =>
-        old?.map((cat) => (cat.id === imageId ? { ...cat, score: cat.score + value } : cat))
+        old?.map((cat) => {
+          if (cat.id !== imageId) return cat;
+
+          if (cat.userVote === value) return cat;
+
+          let newScore = cat.score;
+
+          if (cat.userVote && cat.userVote !== value) {
+            newScore += value * 2;
+          } else {
+            newScore += value;
+          }
+
+          return {
+            ...cat,
+            score: newScore,
+            userVote: value,
+          };
+        })
       );
 
       return { previousCats };

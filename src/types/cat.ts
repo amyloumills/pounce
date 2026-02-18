@@ -41,9 +41,12 @@ export interface UploadResponse {
   approved: number;
 }
 
+type VoteValue = 1 | -1 | 0; // 1 for upvote, -1 for downvote, 0 for no vote
+
 // Enriched cat with aggregated data
 export interface EnrichedCat extends CatImage {
   score: number;
   isFavourite: boolean;
   favouriteId?: number;
+  userVote?: VoteValue;
 }
