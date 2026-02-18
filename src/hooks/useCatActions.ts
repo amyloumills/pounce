@@ -60,8 +60,9 @@ export const useCatActions = () => {
       );
       return { previousCats };
     },
-    onError: (err, newTodo, context) => {
+    onError: (error, imageId, context) => {
       queryClient.setQueryData(['cats'], context?.previousCats);
+      console.error('Failed to add favourite cat, id ', imageId, error);
     },
     onSettled: () => {
       queryClient.invalidateQueries({ queryKey: ['cats'] });
@@ -82,8 +83,9 @@ export const useCatActions = () => {
       );
       return { previousCats };
     },
-    onError: (err, id, context) => {
+    onError: (error, favouriteId, context) => {
       queryClient.setQueryData(['cats'], context?.previousCats);
+      console.error('Failed to remove favourite cat, id ', favouriteId, error);
     },
     onSettled: () => {
       queryClient.invalidateQueries({ queryKey: ['cats'] });
